@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             news: "News & Presse",
             zhaoZech: "Zhao & Zech",
             kontakt: "Kontakt",
-            homeTitle: "Home",
+            homeTitle: "Johann Zhao | Pianist",  // Geändert von "Home"
             mediathekTitle: "Mediathek",
             newsTitle: "News & Presse",
             zhaoZechTitle: "Zhao & Zech",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             news: "News & Press",
             zhaoZech: "Zhao & Zech",
             kontakt: "Contact",
-            homeTitle: "Home",
+            homeTitle: "Johann Zhao | Pianist",  // Geändert von "Home"
             mediathekTitle: "Media Library",
             newsTitle: "News & Press",
             zhaoZechTitle: "Zhao & Zech",

@@ -186,7 +186,7 @@ footer.visible {
 }
 
 .social-icons a:hover {
-    color: #ffd700;
+    color: #bd3232;
     transform: scale(1.2);
 }
 
@@ -351,7 +351,7 @@ form button:hover {
 }
 
 .social-icons-small a:hover {
-    color: #ffd700;
+    color: #bd3232;
 }
 
 /* Responsive Design */
@@ -479,7 +479,8 @@ form button:hover {
     .news-item {
         padding: 10px;
     }
-    /* Fügen Sie dies am Ende Ihrer CSS-Datei hinzu */
+}
+/* Fügen Sie dies am Ende Ihrer CSS-Datei hinzu */
 @media (max-width: 768px) {
     .home-video-container {
         aspect-ratio: 16/9; /* Stellt sicher, dass das korrekte Seitenverhältnis beibehalten wird */
@@ -496,4 +497,24 @@ form button:hover {
         height: 100%;
     }
 }
+/* Footer */
+footer {
+    background-color: rgba(17, 17, 17, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #fff;
+    position: fixed;
+    width: 100%;
+    bottom: -100px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: bottom 0.5s ease;
+}
+
+footer.visible {
+    bottom: 0;
 }

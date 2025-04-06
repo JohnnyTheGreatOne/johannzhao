@@ -165,3 +165,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// Footer erscheint beim Scrollen nach unten
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('main');
+    
+    function checkFooterVisibility() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+        
+        // Wenn wir nahe genug am Seitenende sind (mit 50px Puffer)
+        if (scrollPosition >= pageHeight - 50) {
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+    }
+    
+    // Initial check
+    checkFooterVisibility();
+    
+    // Bei Scroll und Resize checken
+    window.addEventListener('scroll', checkFooterVisibility);
+    window.addEventListener('resize', checkFooterVisibility);
+    
+    // Stelle sicher, dass der Hauptinhalt genug Platz für den Footer hat
+    main.style.marginBottom = '100px';
+});

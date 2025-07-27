@@ -1,3 +1,30 @@
+// Hamburger Menu Funktionalität
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    const closeMenu = document.querySelector('.close-menu');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    // Menü öffnen/schließen
+    hamburger.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    closeMenu.addEventListener('click', function() {
+        nav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
+    
+    // Menü schließen bei Klick auf Link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+});
+
 // Navigation zwischen den Reitern
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav a');
@@ -32,16 +59,20 @@ document.addEventListener('DOMContentLoaded', function () {
 // Übersetzungslogik
 document.addEventListener('DOMContentLoaded', function () {
     const translateButton = document.getElementById('translate-button');
+    const translateButtonDesktop = document.getElementById('translate-button-desktop');
+    
     const translations = {
         de: {
             headerName: "Johann Zhao",
-            home: "Home",
+            home: "Biografie",
             mediathek: "Mediathek",
+            gallerie: "Galerie",
             news: "News & Presse",
             zhaoZech: "Zhao & Zech",
             kontakt: "Kontakt",
-            homeTitle: "Johann Zhao | Pianist",  // Geändert von "Home"
+            homeTitle: "Johann Zhao | Pianist",
             mediathekTitle: "Mediathek",
+            gallerieTitle: "Galerie",
             newsTitle: "News & Presse",
             zhaoZechTitle: "Zhao & Zech",
             kontaktTitle: "Kontakt",
@@ -50,16 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
             kontaktFormMessage: "Nachricht:",
             kontaktFormButton: "Senden",
             confirmationMessage: "Vielen Dank für deine Nachricht!",
+            buttonText: "EN"
         },
         en: {
             headerName: "Johann Zhao",
-            home: "Home",
+            home: "Biography",
             mediathek: "Media Library",
+            gallerie: "Gallery",
             news: "News & Press",
             zhaoZech: "Zhao & Zech",
             kontakt: "Contact",
-            homeTitle: "Johann Zhao | Pianist",  // Geändert von "Home"
+            homeTitle: "Johann Zhao | Pianist",
             mediathekTitle: "Media Library",
+            gallerieTitle: "Gallery",
             newsTitle: "News & Press",
             zhaoZechTitle: "Zhao & Zech",
             kontaktTitle: "Contact",
@@ -68,19 +102,24 @@ document.addEventListener('DOMContentLoaded', function () {
             kontaktFormMessage: "Message:",
             kontaktFormButton: "Send",
             confirmationMessage: "Thank you for your message!",
-        },
+            buttonText: "DE"
+        }
     };
 
     let currentLanguage = 'de';
 
-    translateButton.addEventListener('click', function () {
-        currentLanguage = currentLanguage === 'de' ? 'en' : 'de';
-        translateButton.textContent = currentLanguage === 'de' ? 'EN' : 'DE';
+    function updateButtonText() {
+        const buttonText = translations[currentLanguage].buttonText;
+        if (translateButton) translateButton.textContent = buttonText;
+        if (translateButtonDesktop) translateButtonDesktop.textContent = buttonText;
+    }
 
+    function translateContent() {
         // Übersetze Header-Inhalte
         document.getElementById('header-name').textContent = translations[currentLanguage].headerName;
         document.getElementById('nav-home').textContent = translations[currentLanguage].home;
         document.getElementById('nav-mediathek').textContent = translations[currentLanguage].mediathek;
+        document.getElementById('nav-gallerie').textContent = translations[currentLanguage].gallerie;
         document.getElementById('nav-news').textContent = translations[currentLanguage].news;
         document.getElementById('nav-zhao-zech').textContent = translations[currentLanguage].zhaoZech;
         document.getElementById('nav-kontakt').textContent = translations[currentLanguage].kontakt;
@@ -88,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Übersetze Reiter-Titel
         document.getElementById('home-title').textContent = translations[currentLanguage].homeTitle;
         document.getElementById('mediathek-title').textContent = translations[currentLanguage].mediathekTitle;
+        document.getElementById('gallerie-title').textContent = translations[currentLanguage].gallerieTitle;
         document.getElementById('news-presse-title').textContent = translations[currentLanguage].newsTitle;
         document.getElementById('zhao-zech-title').textContent = translations[currentLanguage].zhaoZechTitle;
         document.getElementById('kontakt-title').textContent = translations[currentLanguage].kontaktTitle;
@@ -108,7 +148,19 @@ document.addEventListener('DOMContentLoaded', function () {
             homeTextsDE.forEach(text => text.style.display = 'none');
             homeTextsEN.forEach(text => text.style.display = 'block');
         }
-    });
+    }
+
+    function handleTranslate() {
+        currentLanguage = currentLanguage === 'de' ? 'en' : 'de';
+        updateButtonText();
+        translateContent();
+    }
+
+    if (translateButton) translateButton.addEventListener('click', handleTranslate);
+    if (translateButtonDesktop) translateButtonDesktop.addEventListener('click', handleTranslate);
+
+    // Initialen Button-Text setzen
+    updateButtonText();
 });
 
 // Lightbox-Funktionalität
@@ -135,12 +187,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Kontaktformular
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     const confirmationMessage = document.getElementById('confirmation');
 
     contactForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Verhindert das Neuladen der Seite
+        event.preventDefault();
 
         const formData = new FormData(contactForm);
 
@@ -153,8 +207,8 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => {
             if (response.ok) {
-                confirmationMessage.style.display = 'block'; // Bestätigungsnachricht anzeigen
-                contactForm.reset(); // Formular zurücksetzen
+                confirmationMessage.style.display = 'block';
+                contactForm.reset();
             } else {
                 throw new Error('Fehler beim Senden der Daten');
             }
@@ -165,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 // Footer erscheint beim Scrollen nach unten
 document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('footer');
@@ -174,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollPosition = window.scrollY + window.innerHeight;
         const pageHeight = document.documentElement.scrollHeight;
         
-        // Wenn wir nahe genug am Seitenende sind (mit 50px Puffer)
         if (scrollPosition >= pageHeight - 50) {
             footer.classList.add('visible');
         } else {
@@ -182,13 +236,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initial check
     checkFooterVisibility();
     
-    // Bei Scroll und Resize checken
     window.addEventListener('scroll', checkFooterVisibility);
     window.addEventListener('resize', checkFooterVisibility);
     
-    // Stelle sicher, dass der Hauptinhalt genug Platz für den Footer hat
     main.style.marginBottom = '100px';
 });

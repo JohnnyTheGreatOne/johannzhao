@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <!-- Favicon einbinden -->
     <link rel="icon" href="JZ Logo mit Rahmen.png" type="image/png">
     <link rel="icon" href="JZ Logo mit Rahmen.ico" type="image/x-icon">
     <link rel="shortcut icon" href="JZ Logo mit Rahmen.ico" type="image/x-icon">
-    <!-- Meta-Daten -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Offizielle Website von Johann Zhao, Pianist. Entdecken Sie Konzerte, Biografie, Mediathek und Kontaktinformationen.">
     <title>Johann Zhao | Pianist</title>
-
-    <!-- Open Graph Meta-Tags -->
     <meta property="og:title" content="Johann Zhao | Pianist">
     <meta property="og:description" content="Offizielle Website von Johann Zhao, Pianist. Entdecken Sie Konzerte, Biografie, Mediathek und Kontaktinformationen.">
     <meta property="og:image" content="https://www.johannzhao.com/Johann%20Zhao%20Foto.JPG">
@@ -19,14 +15,10 @@
     <meta property="og:type" content="website">
     <meta property="og:image:width" content="1095">
     <meta property="og:image:height" content="822">
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <!-- Canonical-Tag hinzufügen -->
     <link rel="canonical" href="https://www.johannzhao.com/" />
-    <!-- Structured Data hinzufügen -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,23 +30,40 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-title">
             <img src="JZ Logo ohne Rahmen.png" alt="Logo" class="header-logo">
             <a href="#home" id="header-name">Johann Zhao</a>
         </div>
+        <div class="mobile-header-controls">
+            <button id="translate-button">EN</button>
+            <button class="hamburger" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
         <nav>
+            <div class="close-menu-container">
+                <button class="close-menu">&times;</button>
+            </div>
             <ul>
-                <li><a href="#home" id="nav-home">Home</a></li>
+                <li><a href="#home" id="nav-home">Biografie</a></li>
                 <li><a href="#mediathek" id="nav-mediathek">Mediathek</a></li>
+                <li><a href="#gallerie" id="nav-gallerie">Galerie</a></li>
                 <li><a href="#news-presse" id="nav-news">News & Presse</a></li>
-                <li><a href="https://www.zhao-zech.com/" id="nav-zhao-zech">Zhao & Zech</a></li>
+                <li><a href="https://www.zhao-zech.com/" id="nav-zhao-zech" target="_blank">Zhao & Zech</a></li>
                 <li><a href="#kontakt" id="nav-kontakt">Kontakt</a></li>
             </ul>
+            <div class="mobile-social-icons">
+                <a href="https://www.youtube.com/@JohannZhao" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/johann._.zhao" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </nav>
         <div class="header-right">
-            <button id="translate-button">EN</button>
+            <button id="translate-button-desktop">EN</button>
             <div class="social-icons-small">
                 <a href="https://www.youtube.com/@JohannZhao" target="_blank" aria-label="YouTube">
                     <i class="fab fa-youtube"></i>
@@ -66,9 +75,7 @@
         </div>
     </header>
 
-    <!-- Hauptinhalt -->
     <main>
-        <!-- Home -->
         <section id="home" class="content-section active">
             <h1 id="home-title">Johann Zhao | Pianist</h1>
             <div class="home-content">
@@ -84,7 +91,7 @@
                         with Prof. Cordelia Höfer-Teutsch and since 2023 with Prof. Connie Shih.
                     </p>
                     <p id="home-text-de">
-                        Seine ersten Klavierkonzerte von W. A. Mozart spielte er als 11-Jähriger bei den „Salzburger Schlosskonzerten“ gemeinsam mit den Salzburger Solisten.
+                        Seine ersten Klavierkonzerte von W. A. Mozart spielte er als 11-Jähriger bei den „Salzburger Schlosskonzerten" gemeinsam mit den Salzburger Solisten.
                         Als 12-Jähriger gewann er einen New Yorker Klavierwettbewerb und spielte beim Schlusskonzert in der Carnegie-Recital-Hall.
                     </p>
                     <p id="home-text-en" style="display: none;">
@@ -94,7 +101,7 @@
                     <p id="home-text-de">
                         Mit 13 Jahren feierte er sein Debut als Solist mit den Bad Reichenhaller Philharmonikern unter der Leitung von Christian Simonis mit dem Klavierkonzert Nr. 1 von F. Mendelssohn und
                         wurde sofort wieder engagiert. Johann ist zudem erster Preisträger diverser nationaler und internationaler Wettbewerbe, darunter 1. Preis beim internationalen
-                        Smetana Klavierwettbewerb (Tschechien), mehrfache 1. Preise beim deutschen Bundeswettbewerb „Jugend Musiziert“ mit Höchstpunktzahl und mehrfacher Bundessieger sowie Landessieger 2020 des
+                        Smetana Klavierwettbewerb (Tschechien), mehrfache 1. Preise beim deutschen Bundeswettbewerb „Jugend Musiziert" mit Höchstpunktzahl und mehrfacher Bundessieger sowie Landessieger 2020 des
                         österreichischen Prima la Musica-Wettbewerbs.
                     </p>
                     <p id="home-text-en" style="display: none;">
@@ -104,17 +111,7 @@
                         Austrian Prima la Musica competition.
                     </p>
                     <p id="home-text-de">
-                        Im April 2019 war Johann Solist in der Berliner Philharmonie und führte mit dem Berliner Sinfonieorchester unter der Leitung von Christoph Koncz das
-                        Klavierkonzert Nr. 1 von Liszt auf. Als begeisterter Kammermusiker spielt Johann in diversen Formationen, wo er bereits wichtige Impulse von Persönlichkeiten wie Cibrán Sierra Vázquez (Cuarteto Quiroga), Leonhard Roczek
-                        (Minetti Quartett) und Connie Shih (Duopartnerin Steven Isserlis) erhielt. Im selben Jahr gewann er den Festival- sowie Publikumspreis des Schleswig-Holstein Musikfestivals im Duo mit Fabian Egger.
-                    </p>
-                    <p id="home-text-en" style="display: none;">
-                        In April 2019, Johann performed as a soloist at the Berlin Philharmonic with the Berlin Symphony Orchestra conducted by Christoph Koncz, performing Liszt's Piano Concerto No. 1.
-                        As an enthusiastic chamber musician, Johann plays in various formations, having already received important impulses from personalities such as Cibrán Sierra Vázquez (Cuarteto Quiroga), Leonhard Roczek
-                        (Minetti Quartet) and Connie Shih (duo partner of Steven Isserlis). In the same year, he won the festival prize as well as audience prize at the Schleswig-Holstein Music Festival in a duo with Fabian Egger.
-                    </p>
-                    <p id="home-text-de">
-                       Im Herbst 2023 trat er mit seinem Lupus-Trio im Rahmen des „Amazing Haydn“-Festivals in Belgien auf. Zudem gewann er im selben Jahr den Förderpreis des Tiroler Klassik Instrumentalistenpreises 2023. 
+                       Im Herbst 2023 trat er mit seinem Lupus-Trio im Rahmen des „Amazing Haydn"-Festivals in Belgien auf. Zudem gewann er im selben Jahr den Förderpreis des Tiroler Klassik Instrumentalistenpreises 2023. 
                        Johann wirkte des Öfteren bei den Operncamps der Salzburger Festspiele mit, wo er mit Dirigentinnen wie Anna Handler und Daniela Ivanova arbeitete und zusammen mit Mitgliedern der Wiener Philharmoniker musizierte. 
                        Masterclasses u.a. bei Elisabeth Leonskaja und Arnulf von Arnim vervollständigen seine Ausbildung. Johann ist Stipendiat der Deutschen Stiftung Musikleben.
                        Weiters geplant sind Konzerte in Istanbul, Japan und bei der Mozartwoche 2026.
@@ -132,7 +129,6 @@
             </div>
         </section>
 
-        <!-- Mediathek -->
         <section id="mediathek" class="content-section">
             <h2 id="mediathek-title">Mediathek</h2>
             <div class="home-video-gallery">
@@ -152,6 +148,10 @@
                     <iframe src="https://www.youtube.com/embed/JgmEUkz47LY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
+        </section>
+
+        <section id="gallerie" class="content-section">
+            <h2 id="gallerie-title">Galerie</h2>
             <div class="gallery">
                 <img src="Portrait Ernst Johann.jpeg" alt="ernst" loading="lazy">
                 <img src="Portrait Johann Zhao.jpeg" alt="portriat" loading="lazy">
@@ -174,7 +174,6 @@
             </div>
         </section>
 
-        <!-- News & Presse -->
         <section id="news-presse" class="content-section">
             <h2 id="news-presse-title">News & Presse</h2>
             <div class="news-container">
@@ -194,32 +193,29 @@
             </div>
         </section>
 
-        <!-- Zhao & Zech -->
         <section id="zhao-zech" class="content-section">
             <h2 id="zhao-zech-title">Zhao & Zech</h2>
-            <p>Das Klavierduo Zhao & Zech (Johann Zhao & Karim Zech) besteht aus zwei Studenten der Universität Mozarteum Salzburg und entstand im Jahr 2023 durch ein spontan geplantes Zusammenspiel bei einer Veranstaltung. Seither spielen sie regelmäßig in Konzerten und geben Rezitals auf nationaler als auch internationaler Ebene. Bisherige Auftritte gab es in Salzburg, Wien, Japan und Deutschland. Ihr breites und abwechslungsreiches Repertoire erstreckt sich vom Barock bis hin zur zeitgenössischen Musik. Bedeutende Impulse erhielten sie bereits von Persönlichkeiten wie Prof. Cordelia Höfer-Teutsch oder Prof. Connie Shih. </p>
+            <p>Das Klavierduo Zhao & Zech (Johann Zhao & Karim Zech) besteht aus zwei Studenten der Universität Mozarteum Salzburg und entstand im Jahr 2023 durch ein spontan geplantes Zusammenspiel bei einer Veranstaltung. Seither spielen sie regelmäßig in Konzerten und geben Rezitals auf nationaler als auch internationaler Ebene. Bisherige Auftritte gab es in Salzburg, Wien, Japan und Deutschland. Ihr breites und abwechslungsreiches Repertoire erstrahlt vom Barock bis hin zur zeitgenössischen Musik. Bedeutende Impulse erhielten sie bereits von Persönlichkeiten wie Prof. Cordelia Höfer-Teutsch oder Prof. Connie Shih. </p>
         </section>
 
-        <!-- Kontaktformular -->
-<section id="kontakt" class="content-section">
-    <h2 id="kontakt-title">Kontakt</h2>
-    <form id="contactForm" action="https://formspree.io/f/mpwqvywb" method="POST">
-        <label for="name" id="kontakt-form-name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <section id="kontakt" class="content-section">
+            <h2 id="kontakt-title">Kontakt</h2>
+            <form id="contactForm" action="https://formspree.io/f/mpwqvywb" method="POST">
+                <label for="name" id="kontakt-form-name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-        <label for="email" id="kontakt-form-email">E-Mail:</label>
-        <input type="email" id="email" name="email" required>
+                <label for="email" id="kontakt-form-email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label for="message" id="kontakt-form-message">Nachricht:</label>
-        <textarea id="message" name="message" required></textarea>
+                <label for="message" id="kontakt-form-message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" id="kontakt-form-button">Senden</button>
-    </form>
-    <p id="confirmation" style="display: none;">Vielen Dank für deine Nachricht!</p>
-</section>
+                <button type="submit" id="kontakt-form-button">Senden</button>
+            </form>
+            <p id="confirmation" style="display: none;">Vielen Dank für deine Nachricht!</p>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="social-icons">
             <a href="https://www.youtube.com/@JohannZhao" target="_blank" aria-label="YouTube">
@@ -232,7 +228,6 @@
         <div class="copyright">© 2025 Johann Zhao</div>
     </footer>
 
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img id="lightbox-img" src="" alt="Lightbox Image">

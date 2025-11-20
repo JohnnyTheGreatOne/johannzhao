@@ -150,6 +150,9 @@
             <h2 id="mediathek-title">Mediathek</h2>
             <div class="home-video-gallery">
                 <div class="home-video-container">
+                    <iframe src="https://www.youtube.com/embed/6PsgyFTFKYY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="home-video-container">
                     <iframe src="https://www.youtube.com/embed/wIdcxHYDgOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="home-video-container">
@@ -170,24 +173,12 @@
         <section id="gallerie" class="content-section">
             <h2 id="gallerie-title">Galerie</h2>
             <div class="gallery">
-                <img src="Portrait Ernst Johann.jpeg" alt="ernst" loading="lazy">
-                <img src="Portrait Johann Zhao.jpeg" alt="portriat" loading="lazy">
-                <img src="Portrait Outdoors Grün Johann.jpeg" alt="grün" loading="lazy">
-                <img src="Portrait Outdoors Weiß Johann.jpeg" alt="weiß" loading="lazy">
-                <img src="Klavier Johann breit heller.jpeg" alt="heller" loading="lazy">
-                <img src="Ganzkörper Johann.jpeg" alt="Ganzkörper" loading="lazy">
-                <img src="solistenkonzert.JPEG" alt="solistenkonzert" loading="lazy">
-                <img src="Johann Zhao Foto.JPG" alt="Portrait Braun" loading="lazy">
-                <img src="cliburn unten.jpg" alt="Bild 4" loading="lazy">
-                <img src="IMG_20200320_142147_292_Original.jpg" alt="Bild 5" loading="lazy">
-                <img src="Johann_Zhao011_Original.jpg" alt="Bild 6" loading="lazy">
-                <img src="Johann_Zhao048_Original.jpg" alt="Bild 7" loading="lazy">
-                <img src="Johann_Zhao099_Original.jpg" alt="Bild 8" loading="lazy">
-                <img src="SAVE_20200320_135707_Original.jpg" alt="prima la 1" loading="lazy">
-                <img src="SAVE_20200320_135714_Original.jpg" alt="prima la 2" loading="lazy">
-                <img src="36632.JPEG" alt="operncamp grau" loading="lazy">
-                <img src="IMG_8407.JPG" alt="operncamp" loading="lazy">
-                <img src="Operncamp-Bild.jpg" alt="Operncamp Bild" loading="lazy">
+                <img src="Portrait Ernst Johann.jpeg" alt="ernst" loading="lazy" data-copyright="© Joanna Bergin">
+                <img src="Portrait Johann Zhao.jpeg" alt="portriat" loading="lazy" data-copyright="© Joanna Bergin">
+                <img src="Ganzkörper Johann.jpeg" alt="Ganzkörper" loading="lazy" data-copyright="© Joanna Bergin">
+                <img src="Portrait Outdoors Grün Johann.jpeg" alt="grün" loading="lazy" data-copyright="© Joanna Bergin">
+                <img src="Portrait Outdoors Weiß Johann.jpeg" alt="weiß" loading="lazy" data-copyright="© Joanna Bergin">
+                <img src="Klavier Johann breit heller.jpeg" alt="heller" loading="lazy" data-copyright="© Joanna Bergin">
             </div>
         </section>
 
@@ -246,14 +237,16 @@
     </footer>
 
     <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Lightbox Image">
+        <div class="lightbox-img-container" style="position: relative;">
+          <span class="close-lightbox">&times;</span>
+          <img id="lightbox-img" src="" alt="Lightbox Image">
+          <span id="lightbox-copyright" class="lightbox-copyright"></span>
+        </div>
+      </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
